@@ -10,4 +10,5 @@ def welcome_message():
             time.sleep(2)  # Change message every 2 seconds
 
 if __name__ == "__main__":
+    print("\n\n======================================================\n\n")
     welcome_message()
