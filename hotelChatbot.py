@@ -1,5 +1,3 @@
-import pandas as pd
-
 knowledgeBase = {
     'owner':"ABC",
     "location":"ccc",
@@ -16,7 +14,8 @@ orders = []
 total = 0
 
 def displayMenu():
-    print(pd.DataFrame(menu, columns=["ITEM","PRICE"], index=[1,2,3]))
+    for i in menu:
+        print(i[0],"  |  ",i[1])
 
 def takeOrder():
     displayMenu()
@@ -30,7 +29,8 @@ def takeOrder():
 
 def genrateBill():
     if len(orders):
-        print(pd.DataFrame(orders,columns="ITEM PRICE QTY TOTAL".split()))
+        for i in orders:
+            print(i[0],"  |  ",i[1], "  |  ",i[2],"  |  ",i[3])
     else:
         print("\n\nYou hav not given any order")
 
